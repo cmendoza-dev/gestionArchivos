@@ -18,13 +18,18 @@ def calculo_elementos():
 
 #calculo_elementos()
 
-# Otener el número de elementos
+# Obtener la media redondeada a 2 decimales
+
+# Obtener la media
 def calculo_media():
-    print(archivo['Oro'].sum()/archivo['Oro'].count())
+    print(archivo['Oro'].sum() / archivo['Oro'].count())
     print(archivo['Oro'].mean())
+
 #calculo_media()
 
 
+
+# print("Obtener la media redondeada a 2 decimales: ", np.round(archivo['Oro'].mean(), 2))
 
 def calculo_mediana():
     numero=np.size(archivo.Oro)
@@ -42,5 +47,25 @@ def calculo_moda():
 #calculo_moda()
 
 
+def calculo_percentile25():
+    print("Percentil 25: ",archivo['Oro'].quantile(0.25))
+#calculo_percentile25()
 
+def calculo_percentile50():
+    print("Percentil 50: ",archivo['Oro'].quantile(0.5))
+#calculo_percentile50()
 
+def calculo_percentile75():
+    print("Percentil 75: ",archivo['Oro'].quantile(0.75))
+#calculo_percentile75()
+
+def calculo_percentile90():
+    print("Percentil 90: ",archivo['Oro'].quantile(0.9))
+#calculo_percentile90()
+
+#Obtener la varianza
+def calculo_varianza():
+    varianza = archivo["Oro"].var(ddof=0)
+    print("Varianza:", varianza)
+
+calculo_varianza()
