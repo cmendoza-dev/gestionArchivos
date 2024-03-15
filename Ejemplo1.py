@@ -65,7 +65,12 @@ def calculo_percentile90():
 
 #Obtener la varianza
 def calculo_varianza():
-    varianza = archivo["Oro"].var(ddof=0)
-    print("Varianza:", varianza)
+    varP= archivo["Oro"].var(ddof=0)
+    varM = archivo["Oro"].var(ddof=1)
+    std = archivo["Oro"].std(ddof=0)
+    print("Varianza poblacional:", varP)
+    print("Varianza muestral:", varM)
+    print()
+    print("Desviación típica:", std)
 
 calculo_varianza()
